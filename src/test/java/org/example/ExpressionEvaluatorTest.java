@@ -99,6 +99,15 @@ class ExpressionEvaluatorTest {
         Assertions.assertFalse((boolean) evaluator.invoke(data, "1 - 2 between {-1,-10}"));
     }
 
+    @DisplayName("Test for ABS")
+    @Test
+    void invokeCasesAbs() throws ExpressionEvaluatorException {
+        ExpressionEvaluator evaluator = new ExpressionEvaluator();
+        DataA data = new DataA(1, 2);
+        Assertions.assertTrue((boolean) evaluator.invoke(data, "(bigDecimal1 - bigDecimal2).abs() == 1"));
+        Assertions.assertTrue((boolean) evaluator.invoke(data, "(bigDecimal2 - bigDecimal1).abs() == 1"));
+    }
+    
     @DisplayName("Test for performance")
     @Disabled
     @Test()
