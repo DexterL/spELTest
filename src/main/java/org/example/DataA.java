@@ -2,11 +2,11 @@ package org.example;
 
 import java.math.BigDecimal;
 
-public class DataA extends Entity{
+public class DataA extends Entity {
     private BigDecimal bigDecimal1;
     private BigDecimal bigDecimal2;
-    private Double double1;
-    private Double double2;
+    private double double1;
+    private double double2;
 
     public DataA(BigDecimal bigDecimal1, BigDecimal bigDecimal2) {
         this.bigDecimal1 = bigDecimal1;
@@ -36,5 +36,21 @@ public class DataA extends Entity{
 
     public void setBigDecimal2(BigDecimal bigDecimal2) {
         this.bigDecimal2 = bigDecimal2;
+    }
+
+    public void setDouble1(double d) {
+        this.double1 = d;
+    }
+    
+    public void setDouble2(double d) {
+        this.double2 = d;
+    }
+
+    public double getDouble1() {
+        return this.double1;
+    }
+
+    public double getDouble2() {
+        return this.double2;
     }
 }

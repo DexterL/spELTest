@@ -4,6 +4,10 @@ public class Entity {
     private String ID;
     private String name;
 
+    public Entity() {
+        super();
+    }
+
     public String getID() {
         return ID;
     }
